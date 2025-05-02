@@ -1,75 +1,118 @@
+@font-face {
+  font-family: "PixelOperator";
+  src: url("/pixel_operator/PixelOperator.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('/pixel_operator/PixelOperator-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
 header {
-    display: flex;
-    align-items: center;       /* vertical centering */
-    justify-content: center;   /* horizontal centering */
-    gap: 20px;                 /* spacing between image and text */
-    padding: 20px;
-      background-color: #1a1a1a;
-    padding: 30px;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #2b2b2b;
+  padding: 30px;
+  border: 5px white solid;
+  border-radius: 5px;
+  color: white;
+}
+
+/* background pattern https://www.magicpattern.design/tools/css-backgrounds */
+body {
+  background-color: #040404;
+  background-image: linear-gradient(#005a06 4px, transparent 4px),
+    linear-gradient(to right, #005a06 4px, #040404 4px);
+  background-size: 15dvw 10dvh;
+  font-family: "PixelOperator";
+}
+
+.papyrusgif {
+  width: 100px;
+  height: auto;
+}
+
+.title-block {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+.button {
+  width: 20dvw;
+  height: auto;
+  display: flex;
+  border: 5px solid #ffa401;
+  border-radius: 2px;
+  background-color: black;
+  color: #ffa401;
+  font-size: 3rem;
+  cursor: pointer;
+  gap: 8px;
+  font-family: "PixelOperator", sans-serif;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1dvh;
+font-weight: bold;
+  & img {
+    width: 25%;
   }
-  body{
-    background: #040404;
-  }
-  .papyrusgif {
-    width: 100px;
-    height: auto;
-  }
-  
-  .title-block {
-    text-align: center;
-    color: white;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  p {
-    margin: 5px 0 0;
-    font-size: 1.2rem;
-  }
-  
-  .button {
-    width: 250px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-  /*   border: none; */
-    border: 1px solid orange;
-    border-radius: 100px;
-    background-color: black;
-    color: orange;
-    font-size: 2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    gap: 8px;
-  }
-  
-  .week-button img {
-    width: 48px;
-    height: 48px;
-    padding: 10px;
-    transition: 0.3s ease;
-  }
-  
-  /* Hover effect on the button changes the image */
-  .week-button:hover .hover-image {
+}
+
+.button:hover {
+  border: 5px solid #ffff00;
+  color: #ffff00;
+
+  & img {
     content: url("image/Heart.png");
   }
-  
-  
-  .week-button2 img {
-    width: 24px;
-    height: 24px;
-    transition: 0.3s ease;
-  }
-  
-  /* Swap image on hover */
-  .week-button2:hover .hover-image {
-    content: url("image/Heart.png");
+}
+
+footer {
+  height: 20dvh;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  border: 5px white solid;
+  color: white;
+  position: sticky;
+  bottom: 2.5dvh;
+  font-size: 3rem;
+
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.leerdoelen-button{
+    width: 30dvw;;
+}
+@media screen and (max-width: 992px) {
+    .button {
+      width: 40dvw;
+    }
+    .leerdoelen-button{
+        width: 90dvw;
+    }
+
+    footer{
+        height: 10dvh;
+    }
   }
