@@ -31,35 +31,39 @@
     </header>
 
     <main>
-        <button class="button">
+      <a href="DetailPage.html?week=1">
+        <button class="button" id="Week1">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 1</span>
           </button>
-          <button class="button">
+        </a>
+        <a href="DetailPage.html?week=2">
+          <button class="button" id="Week2">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 2</span>
           </button>
-          <button class="button">
+        </a>
+          <button class="button" id="Week3">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 3</span>
           </button>
-          <button class="button">
+          <button class="button" id="Week4">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 4</span>
           </button>
-          <button class="button">
+          <button class="button" id="Week5">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 5</span>
           </button>
-          <button class="button">
+          <button class="button" id="Week6">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 6</span>
           </button>
-          <button class="button">
+          <button class="button" id="Week7">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 7</span>
           </button>
-          <button class="button">
+          <button class="button" id="Week8">
             <img src="image/symbol2.png" alt="Icon" class="hover-image" />
             <span>Week 8</span>
           </button>
@@ -77,5 +81,36 @@
     <footer>
       <p id="information">* Choose your battle</p>
     </footer>
+
+
+    <script>
+      const footer = document.getElementById('information');
+    
+      const buttonInfo = {
+    Week1: '* Fight: Kilian Valkhof',
+    Week2: '* Fight: Peter-Paul Koch',
+    Week3: '* Fight: IK MIS EEN NAAM',
+    Week4: '* Fight: Jeremy Keith',
+    Week5: '* Fight: IK MIS EEN NAAM',
+    Week6: '* Fight: Niels Leenheer',
+    Week7: '* Fight: Erik Kroes',
+    Week8: '* Fight: Nienke de Keijzer',
+    Hackaton: '* Fight: Hackaton',
+    Leerdoelen: '* Fight: Leerdoelen',
+  };
+
+  for (const [id, text] of Object.entries(buttonInfo)) {
+    const btn = document.getElementById(id);
+    if (!btn) continue;
+
+    btn.addEventListener('mouseenter', () => {
+      footer.textContent = text;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      footer.textContent = '* Choose your battle';
+    });
+  }
+    </script>
   </body>
 </html>

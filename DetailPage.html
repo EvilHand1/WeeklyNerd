@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+        <!-- <img
+        src="image/Mettaton_overworld_talking.webp"
+        alt="Papyrus"
+        class="papyrusgif"
+      /> -->
+      <img
+        src="image/cool-pose-confident-sexy.gif"
+        alt="Papyrus"
+        class="papyrusgif"
+      />
+
+      <div class="title-block">
+        <h1>Weekly Nerd</h1>
+        <p>Christian van Drunen</p>
+      </div>
+      <img
+        src="image/trombone-musical-instrument.gif"
+        alt="Snas"
+        class="sansgif"
+      />
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+      <p id="information">* Choose your battle</p>
+    </footer>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const week = params.get('week'); // "1", "2", etc.
+    
+      const title = document.getElementById('information');
+    
+      if (week) {
+        title.textContent = `Week ${week}`;
+      } else {
+        title.textContent = "No week selected";
+      }
+    </script>
+  </body>
+</html>
