@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-        <!-- <img
+      <!-- <img
         src="image/Mettaton_overworld_talking.webp"
         alt="Papyrus"
         class="papyrusgif"
@@ -30,52 +30,117 @@
       />
     </header>
 
-    <main>
-        <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 1</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 2</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 3</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 4</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 5</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 6</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 7</span>
-          </button>
-          <button class="button">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Week 8</span>
-          </button>
-          <button class="button leerdoelen-button" id="Hackaton">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Hackaton</span>
-          </button>
-          <button class="button leerdoelen-button" id="Leerdoelen">
-            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-            <span>Leerdoelen</span>
-          </button>
-          
+    <main id="overview">
+      <button class="button" id="Week1">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 1</span>
+      </button>
+      <button class="button" id="Week2">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 2</span>
+      </button>
+      <button class="button" id="Week3">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 3</span>
+      </button>
+      <button class="button" id="Week4">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 4</span>
+      </button>
+      <button class="button" id="Week5">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 5</span>
+      </button>
+      <button class="button" id="Week6">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 6</span>
+      </button>
+      <button class="button" id="Week7">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 7</span>
+      </button>
+      <button class="button" id="Week8">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Week 8</span>
+      </button>
+      <button class="button leerdoelen-button" id="Hackaton">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Hackaton</span>
+      </button>
+      <button class="button leerdoelen-button" id="Leerdoelen">
+        <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+        <span>Leerdoelen</span>
+      </button>
+    </main>
+
+    <main id="detail">
+      <img
+      src="image/chara.png"
+      alt="Papyrus"
+    />
+    <footer id="information-section">
+    <p>DSKFSLKFDSLDKFJSDLFJSLKFDJSDF</p>
+    </footer>
     </main>
 
     <footer>
       <p id="information">* Choose your battle</p>
+      <div id="battle-buttons">
+        <button class="button information-button">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>Samenvatting</span>
+        </button>
+        <button class="button information-button">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>reflectie</span>
+        </button>
+        <button class="button information-button">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>Ga terug</span>
+        </button>
+      </div>
     </footer>
+
+
+    <script>
+      buttons = document.getElementsByClassName("button");
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", () => {
+          const main = document.getElementById("overview"); // selects the <main> tag
+          const detail = document.getElementById("detail");
+          main.style.display = "none";
+          detail.style.display = "block";
+        });
+      }
+
+      const footer = document.getElementById("information");
+
+      const buttonInfo = {
+        Week1: "Kilian Valkhof",
+        Week2: "Peter-Paul Koch",
+        Week3: "IK MIS EEN NAAM",
+        Week4: "Jeremy Keith",
+        Week5: "IK MIS EEN NAAM",
+        Week6: "Niels Leenheer",
+        Week7: "Erik Kroes",
+        Week8: "Nienke de Keijzer",
+        Hackaton: "Hackaton",
+        Leerdoelen: "Leerdoelen",
+      };
+
+      for (const [id, text] of Object.entries(buttonInfo)) {
+        const btn = document.getElementById(id);
+        if (!btn) continue;
+
+        btn.addEventListener("mouseenter", () => {
+          footer.textContent = "* Fight: " + text;
+        });
+
+        btn.addEventListener("mouseleave", () => {
+          footer.textContent = "* Choose your battle";
+        });
+      }
+    </script>
   </body>
 </html>

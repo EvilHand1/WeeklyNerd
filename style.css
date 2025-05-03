@@ -61,7 +61,6 @@ p {
 
 .button {
   width: 20dvw;
-  height: auto;
   min-height: 12.5dvh;
   display: flex;
   border: 5px solid #ffa401;
@@ -77,19 +76,33 @@ p {
   margin: 1dvh;
 font-weight: bold;
   & img {
-    width: 25%;
+    height: 75%;
   }
 }
 
 .button:hover {
   border: 5px solid #ffff00;
   color: #ffff00;
+  height: 12.5dvh;
 
   & img {
     content: url("image/Heart.png");
+    height: 50%;
     animation: bounce 1s alternate ease-in-out infinite;
   }
 }
+
+
+
+#information-section{
+  position: inherit;
+  width: 75dvw;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+
+}
+
 @keyframes bounce {
     0% {
       transform: translateY(5px);
@@ -115,15 +128,32 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  img {
+    height: 45dvh;
+  }
+}
+
+main:last-of-type{
+  display: none;
 }
 
 .leerdoelen-button{
     width: 30dvw;
-    min-height: 20dvh;
 }
 #information{
   font-family: 'PixelOperatorMono';
   font-size: 4rem;
+}
+
+#battle-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  bottom: -70%;
+}
+
+.information-button{
+  width: 25dvw;
 }
 
 @media screen and (max-width: 992px) {
