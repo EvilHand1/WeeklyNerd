@@ -11,6 +11,13 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'PixelOperatorMono';
+    src: url('/pixel_operator/PixelOperatorMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
 header {
   display: flex;
   align-items: center;
@@ -55,6 +62,7 @@ p {
 .button {
   width: 20dvw;
   height: auto;
+  min-height: 12.5dvh;
   display: flex;
   border: 5px solid #ffa401;
   border-radius: 2px;
@@ -79,9 +87,17 @@ font-weight: bold;
 
   & img {
     content: url("image/Heart.png");
+    animation: bounce 1s alternate ease-in-out infinite;
   }
 }
-
+@keyframes bounce {
+    0% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
 footer {
   height: 20dvh;
   background-color: #1a1a1a;
@@ -102,17 +118,30 @@ main {
 }
 
 .leerdoelen-button{
-    width: 30dvw;;
+    width: 30dvw;
+    min-height: 20dvh;
 }
+#information{
+  font-family: 'PixelOperatorMono';
+  font-size: 4rem;
+}
+
 @media screen and (max-width: 992px) {
     .button {
       width: 40dvw;
+      font-size: 2.5rem;
     }
     .leerdoelen-button{
-        width: 90dvw;
+        width: 75dvw;
+        min-height: 15dvh;
     }
 
     footer{
         height: 10dvh;
     }
+
+    #information{
+      font-size: 2rem;
+    }
   }
+
