@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!-- <img
+        src="image/Mettaton_overworld_talking.webp"
+        alt="Papyrus"
+        class="papyrusgif"
+      /> -->
+      <img
+        src="image/cool-pose-confident-sexy.gif"
+        alt="Papyrus"
+        class="papyrusgif"
+      />
+
+      <div class="title-block">
+        <h1>Weekly Nerd</h1>
+        <p>Christian van Drunen</p>
+      </div>
+      <img
+        src="image/trombone-musical-instrument.gif"
+        alt="Snas"
+        class="sansgif"
+      />
+    </header>
+
+    <main id="detail">
+      <img
+      src="image/chara.png"
+      alt="Papyrus"
+    />
+    <footer id="information-section">
+    <p id="samenvatting-inhoud">DSKFSLKFDSLDKFJSDLFJSLKFDJSDF</p>
+    <p id="reflectie-inhoud">MAMAMIAPIZZARIAGOINGTOCOMMITPARAZIA</p>
+    </footer>
+    </main>
+
+    <footer>
+      <p id="information">* Choose your action</p>
+      <div id="battle-buttons">
+        <button class="button information-button" id="samenvatting">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>Samenvatting</span>
+        </button>
+        <button class="button information-button" id="reflectie">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>reflectie</span>
+        </button>
+        <a href="index.html">
+            <button class="button information-button" id="return">
+              <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+              <span>Ga terug</span>
+            </button>
+          </a>
+      </div>
+    </footer>
+
+
+    <script>
+ 
+ document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("information-section").style.display = "none";
+  document.getElementById("reflectie-inhoud").style.display = "none";
+});
+
+      const footer = document.getElementById("information");
+
+
+      const buttonInfo = {
+        samenvatting: "Samenvatting",
+        reflectie: "Reflectie",
+        return: "Flee",
+      };
+
+      for (const [id, text] of Object.entries(buttonInfo)) {
+        const btn = document.getElementById(id);
+        if (!btn) continue;
+
+        btn.addEventListener("mouseenter", () => {
+          footer.textContent = "* Christian uses " + text;
+        });
+
+        btn.addEventListener("mouseleave", () => {
+          footer.textContent = "* Choose your action";
+        });
+      }
+
+      document.getElementById("samenvatting").addEventListener("click", () => {
+        document.getElementById("information-section").style.display = "flex";
+
+        document.getElementById("samenvatting-inhoud").style = "display: flex;";
+     document.getElementById("reflectie-inhoud").style = "display: none;";
+    });
+
+    document.getElementById("reflectie").addEventListener("click", () => {
+        document.getElementById("information-section").style.display = "flex";
+
+     document.getElementById("samenvatting-inhoud").style = "display: none;";
+     document.getElementById("reflectie-inhoud").style = "display: flex;";
+    });
+    </script>
+  </body>
+</html>

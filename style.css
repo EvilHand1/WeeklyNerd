@@ -92,7 +92,9 @@ font-weight: bold;
   }
 }
 
-
+a{
+  text-decoration: none;
+}
 
 #information-section{
   position: inherit;
@@ -111,16 +113,20 @@ font-weight: bold;
       transform: translateY(-5px);
     }
   }
+
 footer {
   height: 20dvh;
   background-color: #1a1a1a;
   border-radius: 5px;
   border: 5px white solid;
   color: white;
-  position: sticky;
   bottom: 2.5dvh;
   font-size: 3rem;
 
+}
+
+#sticky-footer{
+  position: sticky;
 }
 
 main {
@@ -131,10 +137,6 @@ main {
   img {
     height: 45dvh;
   }
-}
-
-main:last-of-type{
-  display: none;
 }
 
 .leerdoelen-button{
@@ -148,6 +150,7 @@ main:last-of-type{
 #battle-buttons{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   position: relative;
   bottom: -70%;
 }
@@ -164,6 +167,10 @@ main:last-of-type{
     .leerdoelen-button{
         width: 75dvw;
         min-height: 15dvh;
+    }
+
+    .information-button{
+      width: 80dvw;
     }
 
     footer{
