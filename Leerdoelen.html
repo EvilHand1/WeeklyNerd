@@ -4,20 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="AnnoyingDog.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header>
-      <!-- <img
-        src="image/Mettaton_overworld_talking.webp"
+      <img
+        src="image/Toriel_overworld_sleeping.webp"
         alt="Papyrus"
-        class="papyrusgif"
-      /> -->
+        class="gif"
+      />
+      <img
+      src="image/monster_kid_fall.gif"
+      alt="Papyrus"
+      class="gif"
+    />
+    <img
+      src="image/dancing-dance.gif"
+      alt="Papyrus"
+      class="gif"
+    />
       <img
         src="image/cool-pose-confident-sexy.gif"
         alt="Papyrus"
-        class="papyrusgif"
+        class="papyrus-gif"
       />
+
 
       <div class="title-block">
         <h1>Weekly Nerd</h1>
@@ -26,8 +38,25 @@
       <img
         src="image/trombone-musical-instrument.gif"
         alt="Snas"
-        class="sansgif"
+
+        class="gif"
       />
+      <img
+        src="image/Mettaton_overworld_talking.webp"
+        alt="Papyrus"
+        class="gif"
+      />
+      <img
+      src="image/Undyne_overworld_spear.webp"
+      alt="Papyrus"
+      class="gif"
+    />
+
+      <img
+      src="image/asgore-cut.gif"
+      alt="Papyrus"
+      class="gif"
+    />
     </header>
 
     <main id="detail">
@@ -35,18 +64,29 @@
       src="image/chara.png"
       alt="Papyrus"
     />
-    <footer id="information-section">
-    <p id="samenvatting-inhoud">DSKFSLKFDSLDKFJSDLFJSLKFDJSDF</p>
-    <p id="reflectie-inhoud">MAMAMIAPIZZARIAGOINGTOCOMMITPARAZIA</p>
-    </footer>
+    <div class="text-section" id="information-section">
+      <h1>Over mij</h1>
+      
+    <div id="samenvatting-inhoud">
+      <p>Leerdoel 1: Designs om kunnen zetten naar html en css.</p>
+      <p>Tijdens deze minor moest ik veel designen en ik heb daar nog moeite mee, met de meesterproef wil ik deel zijn van het design proces, maar voornamelijk focussen op die designs kunnen vertalen naar html en css. Tijdens de hackaton maakte Stijn een design en die kon die zo vertalen naar code talen, en ik vind dat een handige skill om te hebben.</p>
+      <p>Leerdoel 2: Hulp vragen aan docenten</p>
+      <p>Ik heb redelijk wat moeite met alle code en alles en ik ben al meer gaan vragen, maar niet aan de docenten maar aan mijn klasgenoten. Voor simpele feedback is dit goed, maar ik heb ook heel vaak dat als ik daadwerkelijk een groot probleem heb ik niet naar de docent durf te stappen, en dit wil ik wel verbeteren.</p>
+      <p>Leerdoel 3: Documentatie op een andere manier schrijven</p>
+      <p>De readMe moeten we al het hele semester gebruiken om documentatie te schrijven, maar met de API beoordeling kreeg ik te horen dat ik het niet goed deed. De readMe is bedoelt voor mensen die verder gaan aan dit project, dus ik wil mijn documentatie goed bijhouden en de documentatie op de manier schrijven.</p>
+    </div>
+    <p id="reflectie-inhoud">
+      <p>BLABLABLA</p>
+    </p>
+    </div>
     </main>
 
-    <footer>
+    <footer class="text-section">
       <p id="information">* Choose your action</p>
       <div id="battle-buttons">
-        <button class="button information-button" id="samenvatting">
+        <button class="button information-button" id="leerdoelen">
           <img src="image/symbol2.png" alt="Icon" class="hover-image" />
-          <span>Samenvatting</span>
+          <span>Leerdoelen</span>
         </button>
         <button class="button information-button" id="reflectie">
           <img src="image/symbol2.png" alt="Icon" class="hover-image" />
@@ -73,9 +113,10 @@
 
 
       const buttonInfo = {
-        samenvatting: "Samenvatting",
+        samenvatting: "Leerdoelen",
         reflectie: "Reflectie",
         return: "Flee",
+        leerdoelen: "Leerdoelendfdfs"
       };
 
       for (const [id, text] of Object.entries(buttonInfo)) {
@@ -91,7 +132,7 @@
         });
       }
 
-      document.getElementById("samenvatting").addEventListener("click", () => {
+      document.getElementById("leerdoelen").addEventListener("click", () => {
         document.getElementById("information-section").style.display = "flex";
 
         document.getElementById("samenvatting-inhoud").style = "display: flex;";
