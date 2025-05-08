@@ -107,7 +107,10 @@ a {
   margin: 3rem;
 }
 
-#samenvatting-inhoud {
+strong{
+  font-size: 1.5rem;
+}
+#samenvatting-inhoud, #reflectie-inhoud {
   font-size: 1.2rem;
   flex-direction: column;
 }
