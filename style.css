@@ -1,19 +1,19 @@
 @font-face {
   font-family: "PixelOperator";
-  src: url("/pixel_operator/PixelOperator.ttf") format("truetype");
+  src: url("./pixel_operator/PixelOperator.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "PixelOperator";
-  src: url("/pixel_operator/PixelOperator-Bold.ttf") format("truetype");
+  src: url("./pixel_operator/PixelOperator-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PixelOperatorMono";
-  src: url("/pixel_operator/PixelOperatorMono-Bold.ttf") format("truetype");
+  src: url("./pixel_operator/PixelOperatorMono-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -53,17 +53,17 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
 p {
   margin: 5px 0 0;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .button {
   width: 20dvw;
-  min-height: 12.5dvh;
+  height: 12.5dvh;
   display: flex;
   border: 5px solid #ffa401;
   border-radius: 2px;
@@ -170,8 +170,11 @@ main {
 
 @media screen and (max-width: 992px) {
   .button {
-    width: 40dvw;
+    width: 60dvw;
     font-size: 2.5rem;
+    & img {
+    height: 75%;
+  }
   }
   .leerdoelen-button {
     width: 75dvw;
@@ -181,6 +184,16 @@ main {
   .information-button {
     width: 80dvw;
   }
+
+  h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
 
   footer {
     height: 10dvh;
