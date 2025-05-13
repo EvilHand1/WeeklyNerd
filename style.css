@@ -140,12 +140,19 @@ strong{
 
 main {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   img {
     height: 45dvh;
   }
+}
+
+ul{
+display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .leerdoelen-button {
