@@ -1,19 +1,19 @@
 @font-face {
   font-family: "PixelOperator";
-  src: url("./pixel_operator/PixelOperator.ttf") format("truetype");
+  src: url("WeeklyNerd/pixel_operator/PixelOperator.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "PixelOperator";
-  src: url("./pixel_operator/PixelOperator-Bold.ttf") format("truetype");
+  src: url("WeeklyNerd/pixel_operator/PixelOperator-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PixelOperatorMono";
-  src: url("./pixel_operator/PixelOperatorMono-Bold.ttf") format("truetype");
+  src: url("WeeklyNerd/pixel_operator/PixelOperatorMono-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
