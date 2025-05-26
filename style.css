@@ -1,19 +1,19 @@
 @font-face {
   font-family: "PixelOperator";
-  src: url("../fonts/PixelOperator.ttf") format("truetype");
+  src: url("fonts/PixelOperator.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "PixelOperator";
-  src: url("../fonts/PixelOperator-Bold.ttf") format("truetype");
+  src: url("fonts/PixelOperator-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PixelOperatorMono";
-  src: url("../fonts/PixelOperatorMono-Bold.ttf") format("truetype");
+  src: url("fonts/PixelOperatorMono-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
