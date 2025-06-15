@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
  // List of alternate GIFs to randomly choose from
  const alternateGifs = [
-    "image/chachacha.gif",
-    "image/Annoying_Dog_sprite.webp",
-    "image/Annoying_Dog_overworld_bomb.webp",
-    "image/Annoying_Dog_sprite.webp",
-    "image/Annoying_Dog_overworld_bomb.webp"
+    "/image/chachacha.gif",
+    "/image/Annoying_Dog_sprite.webp",
+    "/image/Annoying_Dog_overworld_bomb.webp",
+    "/image/Annoying_Dog_sprite.webp",
+    "/image/Annoying_Dog_overworld_bomb.webp"
   ];
 
   // Get all images in the header
