@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
  // List of alternate GIFs to randomly choose from
+ const basePath = window.location.pathname.includes("/WeeklyNerds/") ? "../image/" : "image/";
  const alternateGifs = [
-    "/image/chachacha.gif",
-    "/image/Annoying_Dog_sprite.webp",
-    "/image/Annoying_Dog_overworld_bomb.webp",
-    "/image/Annoying_Dog_sprite.webp",
-    "/image/Annoying_Dog_overworld_bomb.webp"
+  `${basePath}chachacha.gif`,
+  `${basePath}Annoying_Dog_sprite.webp`,
+  `${basePath}Annoying_Dog_overworld_bomb.webp`,
+  `${basePath}Annoying_Dog_sprite.webp`,
+  `${basePath}Annoying_Dog_overworld_bomb.webp`
   ];
 
   // Get all images in the header
