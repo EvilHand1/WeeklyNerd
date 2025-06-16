@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="AnnoyingDog.js" defer></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="image/Toriel_overworld_sleeping.webp"
+        alt="Papyrus"
+        class="gif"
+      />
+      <img src="image/monster_kid_fall.gif" alt="Papyrus" class="gif" />
+      <img src="image/dancing-dance.gif" alt="Papyrus" class="gif" />
+      <img
+        src="image/cool-pose-confident-sexy.gif"
+        alt="Papyrus"
+        class="papyrus-gif"
+      />
+
+      <div class="title-block">
+        <h1>Weekly Nerd</h1>
+        <p>Christian van Drunen</p>
+      </div>
+      <img src="image/trombone-musical-instrument.gif" alt="Snas" class="gif" />
+      <img
+        src="image/Mettaton_overworld_talking.webp"
+        alt="Papyrus"
+        class="gif"
+      />
+      <img src="image/Undyne_overworld_spear.webp" alt="Papyrus" class="gif" />
+
+      <img src="image/asgore-cut.gif" alt="Papyrus" class="gif" />
+    </header>
+
+    <main id="detail">
+      <img src="image/chara.png" alt="Papyrus" />
+      <div class="text-section" id="information-section">
+        <h1>Reflectie</h1>
+
+        <div id="samenvatting-inhoud">
+          <strong>CSS To the Rescue.</strong>
+          <p>
+            Het concept van dit project vind ik leuk. Dat ik mag kiezen tussen 3
+            opdrachten is goed. Ik heb natuurlijk eerst gekozen voor de movie
+            timeline, terwijl ik eigenlijk de control panel leuker vond. Dit
+            kwam omdat de movietimeline makkelijker leek en de control panel
+            echt onmogelijk leek. Ik ben niet het beste in designen dus dat
+            hield me heel erg tegen om de control panel te kiezen. Met de
+            timeline bleek het designen ook veel meer dan verwacht en omdat ik
+            daar dus slechter en ook nieuw maakte ik niet heel veel progressie
+            de eerste 3 weken. Ik keek heel erg op tegen het maken van de
+            timeline en toen ik er uiteindelijk moest lukte het niet en toen was
+            ik daar ook echt klaar mee. Ik ben heel blij dat ik geswitched ben
+            naar de control panel, want uiteindelijk was ik daar ook veel
+            sneller mee. Uiteindelijk heb ik ook veel geleerd over css en
+            voornamelijk nesting. Ik heb technieken gebruikt zoals: Nesting,
+            Style Queries, Container Queries, has, animaties en css in general
+          </p>
+          <strong>Browser Tech</strong>
+          <p>
+            Ik vond dit een moeilijke opdracht, omdat ik geen idee had wat goede
+            html is. Ik wist ook niet zo goed waar ik op moest focussen en toen
+            ik het vroeg aan Krijn kreeg ik niet echte nuttige feedback.
+          </p>
+        </div>
+        <div id="reflectie-inhoud">
+          <strong> API</strong>
+          <p>
+            Het vak API vond ik lastig. Ik kende me css niet, ik kende met html
+            niet en dan moest ik javascript, liquid en API's leren. Dit was
+            nogal veel, maar het viel eigenlijk best mee. Liquid is ongeveer
+            hetzelfde als html, je hebt gewoon een paar extra stukken. De API
+            die ik had uitgekozen was een beetje vaag hoe ik data eruit moest
+            halen, maar toen ik het eenmal wist ging het wel. De andere API's
+            waren niet zo moeilijk als ik dacht. Ik heb ook een nieuwe manier
+            van stylen geprobeerd, namelijk via de console, wat ik heel fijn
+            vind omdat ik me veranderingen gelijk kan zien.
+          </p>
+          <strong>Human Centered Design</strong>
+          <p>
+            Ik vond dit vak heel interessant. Met gamedevelopment moeten wij ook
+            heel veel testen, maar dit is op een heel andere manier. We moesten
+            een site maken voor 1 specifiek persoon, wat makkelijk klinkt maar
+            moeilijker was dan verwacht. Ik had de opdracht om ondertiteling
+            beter maken en ik vind mijn eindresultaat echt leuk.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-section">
+      <p id="information">* Choose your action</p>
+      <div id="battle-buttons">
+        <button class="button information-button" id="leerdoelen">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>Reflectie 1</span>
+        </button>
+        <button class="button information-button" id="reflectie">
+          <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+          <span>Reflectie 2</span>
+        </button>
+        <a href="index.html">
+          <button class="button information-button" id="return">
+            <img src="image/symbol2.png" alt="Icon" class="hover-image" />
+            <span>Ga terug</span>
+          </button>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("information-section").style.display = "none";
+        document.getElementById("reflectie-inhoud").style.display = "none";
+      });
+
+      const footer = document.getElementById("information");
+
+      const buttonInfo = {
+        leerdoelen: "Reflectie 1",
+        reflectie: "Reflectie 2",
+        return: "Flee",
+      };
+
+      for (const [id, text] of Object.entries(buttonInfo)) {
+        const btn = document.getElementById(id);
+        if (!btn) continue;
+
+        btn.addEventListener("mouseenter", () => {
+          footer.textContent = "* Christian uses " + text;
+        });
+
+        btn.addEventListener("mouseleave", () => {
+          footer.textContent = "* Choose your action";
+        });
+      }
+
+      document.getElementById("leerdoelen").addEventListener("click", () => {
+        document.getElementById("information-section").style.display = "flex";
+        document.getElementById("samenvatting-inhoud").style = "display: flex;";
+        document.getElementById("reflectie-inhoud").style = "display: none;";
+      });
+
+      document.getElementById("reflectie").addEventListener("click", () => {
+        document.getElementById("information-section").style.display = "flex";
+        document.getElementById("reflectie-inhoud").style = "display: flex;";
+        document.getElementById("samenvatting-inhoud").style = "display: none;";
+      });
+    </script>
+  </body>
+</html>
