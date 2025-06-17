@@ -56,6 +56,11 @@ h1 {
   font-size: 5rem;
 }
 
+h2{
+  margin: 0;
+  font-size: 4rem;
+}
+
 p {
   margin: 5px 0 0;
   font-size: 1.5rem;
@@ -133,6 +138,8 @@ strong{
   color: white;
   bottom: 2.5dvh;
   font-size: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 #sticky-footer {
@@ -162,6 +169,7 @@ display: flex;
 #information {
   font-family: "PixelOperatorMono";
   font-size: 4rem;
+  padding-left: 2rem;
 }
 
 #battle-buttons {
@@ -196,7 +204,11 @@ display: flex;
 
   h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+h2{
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 p {
@@ -210,6 +222,7 @@ p {
 
   #information {
     font-size: 2rem;
+    padding-left: 1rem;
   }
   #information-section {
     padding: 1rem;
@@ -219,4 +232,42 @@ p {
   header img:nth-of-type(n + 6) {
     display: none;
   }
+  .gif{
+width: 100px;
+  }
+  .papyrus-gif{
+    width: 75px;
+  }
+
+  .text-section{
+        margin-left: .5rem;
+    margin-right: .5rem;
+  }
 }
+
+
+/* CHAT GPT CAUSE I COULDN'T BE BOTHERED TO DO IT MYSELF */
+/* ≤1500px: hide 1st and 8th */
+@media (max-width: 1500px) {
+  header img:nth-of-type(-n + 1),
+  header img:nth-of-type(n + 8) {
+    display: none;
+  }
+}
+
+/* ≤1200px: hide 1st–2nd and 7th–8th */
+@media (max-width: 1200px) {
+  header img:nth-of-type(-n + 2),
+  header img:nth-of-type(n + 7) {
+    display: none;
+  }
+}
+
+/* ≤900px: hide 1st–3rd and 6th–8th (only 2 on each side remain) */
+@media (max-width: 900px) {
+  header img:nth-of-type(-n + 3),
+  header img:nth-of-type(n + 6) {
+    display: none;
+  }
+}
+
