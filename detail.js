@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.getElementById("information");
 
   const buttonInfo = {
-    samenvatting: "Samenvatting",
+    samenvatting: "Notities",
     reflectie: "Reflectie",
     return: "Flee",
   };
